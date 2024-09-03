@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Technical Documentation page</title>
+    <link rel="stylesheet" href="styles2.css"> 
+</head>
+<body>
+    <nav id="navbar">
+        <header>LINUX BASIC COMMANDS</header>
+        <div class="navdiv"><a class="nav-link" href="#ls_command">ls command</a></div>
+        <div class="navdiv"><a class="nav-link" href="#cd_command">cd command</a></div>
+        <div class="navdiv"><a class="nav-link" href="#pwd_command">pwd command</a></div>
+        <div class="navdiv"><a class="nav-link" href="#mkdir_command">mkdir command</a></div>
+        <div class="navdiv"><a class="nav-link" href="#man_command">man command</a></div>
+        <div class="navdiv"><a class="nav-link" href="#mv_command">mv command</a></div>
+        <div class="navdiv"><a class="nav-link" href="#cp_command">cp command</a></div>
+        <div class="navdiv"><a class="nav-link" href="#chmod_command">chmod command</a></div>
+        <div class="navdiv"><a class="nav-link" href="#rm_command">rm command</a></div>
+        <div class="navdiv"><a class="nav-link" href="#more_command">more command</a></div>
+        <div class="navdiv"><a class="nav-link" href="#ps_top_command">ps top command</a></div>
+        <div class="navdiv"><a class="nav-link" href="#kill_command">kill command</a></div>
+    </nav>
+    <main id="main-doc">
+        <section id="ls_command" class="main-section">
+            <header>ls command</header>
+            <p>To find what have we here? we use ls command</p>
+            <p>It Lists the contents of the current working directory</p>
+            <ul>
+                <li>
+                    <div class="info">
+                    <code>ls -l</code>
+                    <p>long listing, with dates, owners, etc.</p>
+                    </div>
+                </li>
+                <li>
+                    <div class="info">
+                    <code>ls -lrt</code>
+                    <p>above, but sorted by time.</p>
+                    </div>
+                </li>
+                <li>
+                    <div class="info">
+                    <code>ls -lrt /home/yourname/something</code>
+                    <p>long-list a different directory.</p>
+                    </div>
+                </li>
+            </ul>
+        </section>
+        <section id="cd_command" class="main-section">
+            <header>cd command</header>
+            <p>We use cd command to go somewhere else.</p>
+            <p>It Changes the current working directory</p>
+            <ul>
+                <li>
+                    <div class="info">
+                    <code>cd /tmp/yourname/</code>
+                    <p>go to your temporary directory.</p>
+                    </div>
+                </li>
+                <li>
+                    <div class="info">
+                    <code>cd -</code>
+                    <p>go back to where you just were</p>
+                    </div>
+                </li>
+                <li>
+                    <div class="info">
+                    <code>cd</code>
+                    <p>no arguments, go back “home”
+                        “home” is where your login starts</p>
+                    </div>
+                </li>
+            </ul>
+        </section>
+        <section id="pwd_command" class="main-section">
+            <header>pwd command</header>
+            <p>We use pwd command to find Where am I?</p>
+            <p>It Prints name of the “current working directory”</p>
+            <ul>
+                <li>
+                    <div class="info">
+                    <code>pwd</code>
+                    <p>This is the default directory/folder where the
+                        shell program will look first for programs, files,
+                        etc. It is “where you are” in Unix space.</p>
+                    </div>
+                </li>
+            </ul>
+        </section>
+        <section id="mkdir_command" class="main-section">
+            <header>mkdir command</header>
+            <p>We use mkdir command to create a new beginning.</p>
+            <p>It Creates a new directory.</p>
+            <ul>
+                <li>
+                    <div class="info">
+                    <code>mkdir ./something</code>
+                    <p>make it.</p>
+                    </div>
+                </li>
+                <li>
+                    <div class="info">
+                    <code>cd ./something</code>
+                    <p>go there</p>
+                    </div>
+                </li>
+                <li>
+                    <div class="info">
+                    <code>ls</code>
+                    <p>check its empty</p>
+                    </div>
+                </li>
+            </ul>
+        </section>
+        <section id="man_command" class="main-section">
+            <header>man command</header>
+            <p>How do I get help?</p>
+            <p>Using man command will Display the manual for a given program</p>
+            <ul>
+                <li>
+                    <div class="info">
+                    <code>man ls</code>
+                    <p>see manual for the “ls” command</p>
+                    </div>
+                </li>
+                <li>
+                    <div class="info">
+                    <code>man tcsh</code>
+                    <p>learn about the C shell</p>
+                    </div>
+                </li>
+                <li>
+                    <div class="info">
+                    <code>man bash</code>
+                    <p>learn about that other shell</p>
+                    </div>
+                </li>
+                <li>
+                    <div class="info">
+                    <code>man man</code>
+                    <p>read the manual for the manual</p>
+                    </div>
+                </li>
+            </ul>
+            <p>To return to the command prompt, type "q"</p>
+        </section>
+        <section id="mv_command" class="main-section">
+            <header>mv command</header>
+            <p>Move it!!</p>
+            <p>We use mv command to Move or rename a file. If you think about it, these are the same
+                thing.</p>
+            <ul>
+                <li>
+                    <div class="info">
+                    <code>mv stupidname.txt bettername.txt</code>
+                    <p>change name</p>
+                    </div>
+                </li>
+                <li>
+                    <div class="info">
+                    <code>mv stupidplace/file.txt ../betterplace/file.txt</code>
+                    <p>same name, different directory</p>
+                    </div>
+                </li>
+                <li>
+                    <div class="info">
+                    <code>mv stupidname_*.img bettername_*.img</code>
+                    <p style="color:red">Will not work! Never ever do this!</p>
+                    </div>
+                </li>
+            </ul>
+        </section>
+        <section id="cp_command" class="main-section">
+            <header>cp command</header>
+            <p>Copy machine.</p>
+            <p>We use it to Copy a file. This is just like “mv” except it
+                does not delete the original.</p>
+            <ul>
+                <li>
+                    <div class="info">
+                    <code>cp stupidname.txt bettername.txt</code>
+                    <p>change name, keep original</p>
+                    </div>
+                </li>
+                <li>
+                    <div class="info">
+                    <code>rm stupidname.txt</code>
+                    <p>now this is the same as “mv”</p>
+                    </div>
+                </li>
+            </ul>
+        </section>
+        <section id="chmod_command" class="main-section">
+            <header>chmod command</header>
+            <p>“Permission denied” !?</p>
+            <p>chmod command is used to Change the “permission” of a file.</p>
+            <ul>
+                <li>
+                    <div class="info">
+                    <code>chmod a+r filename.txt</code>
+                    <p>make it so everyone can read it</p>
+                    </div>
+                </li>
+                <li>
+                    <div class="info">
+                    <code>chmod u+rwx filename.txt</code>
+                    <p>make it so you can read/write/execute it</p>
+                    </div>
+                </li>
+                <li>
+                    <div class="info">
+                    <code>chmod –R u+rw /some/random/place</code>
+                    <p>make it so you can read/write everything under
+                        a directory</p>
+                    </div>
+                </li>
+            </ul>
+        </section>
+        <section id="rm_command" class="main-section">
+            <header>rm command</header>
+            <p>Destroy! Destroy!</p>
+            <p>We use rm command to Delete files or directories.</p>
+            <ul>
+                <li>
+                    <div class="info">
+                    <code>rm filename</code>
+                    <p>delete it</p>
+                    </div>
+                </li>
+                <li>
+                    <div class="info">
+                    <code>rm –rf /stupid/place/with/stuff</code>
+                    <p>Danger! Don’t do this unless you know exactly
+                        what you are doing</p>
+                    </div>
+                </li>
+            </ul>
+        </section>
+        <section id="more_command" class="main-section">
+            <header>more command</header>
+            <p>It does what it says on the tin</p>
+            <p>It Displays a text file, one screen at a time.</p>
+            <ul>
+                <li>
+                    <div class="info">
+                    <code>more filename.txt</code>
+                    <p>view the file one page at a time</p>
+                    </div>
+                </li>
+                <li>
+                    <div class="info">
+                    <code>enter</code>
+                    <p>move one line forward</p>
+                    </div>
+                </li>
+                <li>
+                    <div class="info">
+                    <code>space</code>
+                    <p>move one screen forward</p>
+                    </div>
+                </li>
+                <li>
+                    <div class="info">
+                    <code>b</code>
+                    <p>move one screen back</p>
+                    </div>
+                </li>
+            </ul>
+            <p>more will exit when you hit “q”</p>
+        </section>
+        <section id="ps_top_command" class="main-section">
+            <header>ps top command</header>
+            <p>What’s going on here?</p>
+            <p>ps and top commands Display the currently running processes</p>
+            <ul>
+                <li>
+                    <div class="info">
+                    <code>ps</code>
+                    <p>snapshot of processes at the time of the command</p>
+                    </div>
+                </li>
+                <li>
+                    <div class="info">
+                    <code>top</code>
+                    <p>real-time display of processes</p>
+                    </div>
+                </li>
+            </ul>
+            <p>“top” will exit when you hit “q”</p>
+        </section>
+        <section id="kill_command" class="main-section">
+            <header>kill command</header>
+            <p>Kill ‘em all!</p>
+            <p>kill command Terminates a process</p>
+            <ul>
+                <li>
+                    <div class="info">
+                    <code>kill -9 1234</code>
+                    <p>kills process 1234</p>
+                    </div>
+                </li>
+                <li>
+                    <div class="info">
+                    <code>ps</code>
+                    <p>figure out what the process ID is.</p>
+                    </div>
+                </li>
+            </ul>
+        </section>
+    </main>
+</body>
+</html>
